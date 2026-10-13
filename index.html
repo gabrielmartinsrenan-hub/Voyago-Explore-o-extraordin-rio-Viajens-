@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d3b36">
+  <meta name="description" content="Descubra destinos incríveis e planeje sua próxima viagem com a Voyago.">
+  <title>Voyago — O mundo espera por você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="topo">
+    <div class="container nav-wrap">
+      <a class="brand" href="#topo" aria-label="Voyago início"><span class="brand-mark"><i data-lucide="compass"></i></span><span>voya<span class="brand-accent">go</span><small>EXPLORE O EXTRAORDINÁRIO</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#destinos">Destinos</a><a href="#experiencias">Experiências</a><a href="#sobre">Sobre nós</a>
+        <a class="nav-cta" href="#planejar">Planejar viagem <i data-lucide="arrow-up-right"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=85&w=2200&auto=format&fit=crop" alt="Lago azul cercado por montanhas" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div class="eyebrow light"><span></span> SUA PRÓXIMA HISTÓRIA COMEÇA AQUI</div>
+        <h1>O mundo é grande.<br><em>Vá viver.</em></h1>
+        <p>Encontre lugares que inspiram, experiências que marcam e viagens que ficam com você para sempre.</p>
+        <div class="hero-actions"><a class="button button-lime" href="#destinos">Explorar destinos <i data-lucide="arrow-up-right"></i></a><a class="text-link light-link" href="#experiencias"><span class="play-icon"><i data-lucide="play"></i></span> Conheça a Voyago</a></div>
+        <div class="hero-note"><div class="avatar-stack"><span>✦</span><span>✦</span><span>✦</span></div><div><strong>Mil possibilidades</strong><small>Uma viagem com a sua cara</small></div></div>
+      </div>
+      <div class="hero-bottom container"><span>01 — DESCUBRA O SEU PRÓXIMO DESTINO</span><span class="scroll-cue">ROLE PARA EXPLORAR <i data-lucide="arrow-down"></i></span></div>
+    </section>
+
+    <section class="search-section" id="planejar">
+      <div class="container">
+        <form class="search-card" id="searchForm">
+          <div class="search-field destination-field"><label for="destinationInput"><i data-lucide="map-pin"></i> Para onde?</label><input id="destinationInput" type="text" placeholder="Cidade, país ou experiência"><span class="field-hint">Escolha seu destino</span></div>
+          <div class="search-divider"></div>
+          <div class="search-field"><label for="dateInput"><i data-lucide="calendar-days"></i> Quando?</label><input id="dateInput" type="date"><span class="field-hint">Datas flexíveis</span></div>
+          <div class="search-divider"></div>
+          <div class="search-field"><label for="travelersInput"><i data-lucide="users"></i> Viajantes</label><select id="travelersInput"><option value="1">1 viajante</option><option value="2" selected>2 viajantes</option><option value="3">3 viajantes</option><option value="4">4 viajantes</option><option value="5+">5+ viajantes</option></select><span class="field-hint">Quem vai com você?</span></div>
+          <button class="button button-dark search-button" type="submit"><i data-lucide="search"></i> Buscar viagens</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section destinations-section" id="destinos">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span></span> DESTINOS EM DESTAQUE</div><h2>Seu próximo lugar<br>favorito está <em>por aqui.</em></h2></div>
+          <p>De paisagens tranquilas a cidades cheias de energia: escolha o cenário da sua próxima aventura.</p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filtrar destinos">
+          <button class="filter-chip active" data-filter="todos">Todos os destinos</button>
+          <button class="filter-chip" data-filter="praia">Praias</button>
+          <button class="filter-chip" data-filter="natureza">Natureza</button>
+          <button class="filter-chip" data-filter="cidade">Cidades</button>
+        </div>
+        <div class="destination-grid" id="destinationGrid">
+          <article class="destination-card" data-category="praia" data-search="bali indonesia praia mar cultura">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=900&auto=format&fit=crop" alt="Templo e paisagem tropical em Bali" loading="lazy"><span class="photo-tag">TROPICAL</span><button class="favorite-btn" aria-label="Favoritar Bali"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Indonésia</div><h3>Bali, Indonésia</h3><p>Templos, águas cristalinas e dias sem pressa.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 3.890 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Bali"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="destination-card" data-category="cidade" data-search="lisboa portugal cidade gastronomia cultura">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=900&auto=format&fit=crop" alt="Ruas e arquitetura de Lisboa" loading="lazy"><span class="photo-tag">CULTURA</span><button class="favorite-btn" aria-label="Favoritar Lisboa"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Portugal</div><h3>Lisboa, Portugal</h3><p>Ruas charmosas, boa comida e história em cada esquina.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 4.250 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Lisboa"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="destination-card" data-category="natureza" data-search="patagonia argentina montanhas natureza aventura">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=900&auto=format&fit=crop" alt="Montanhas imponentes da Patagônia" loading="lazy"><span class="photo-tag">AVENTURA</span><button class="favorite-btn" aria-label="Favoritar Patagônia"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Argentina</div><h3>Patagônia</h3><p>Montanhas grandiosas e natureza em estado puro.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 2.690 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Patagônia"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="destination-card" data-category="praia" data-search="santorini grecia praia ilhas mar">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=900&auto=format&fit=crop" alt="Casas brancas de Santorini sobre o mar" loading="lazy"><span class="photo-tag">ROMÂNTICO</span><button class="favorite-btn" aria-label="Favoritar Santorini"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Grécia</div><h3>Santorini, Grécia</h3><p>Pôr do sol inesquecível e o azul do Mediterrâneo.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 5.190 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Santorini"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="destination-card" data-category="cidade" data-search="kyoto japao cidade cultura templos">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=900&auto=format&fit=crop" alt="Rua tradicional em Kyoto, Japão" loading="lazy"><span class="photo-tag">TRADIÇÃO</span><button class="favorite-btn" aria-label="Favoritar Kyoto"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Japão</div><h3>Kyoto, Japão</h3><p>Jardins serenos, templos antigos e novas descobertas.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 6.490 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Kyoto"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="destination-card" data-category="natureza" data-search="dolomitas italia montanhas natureza trilha">
+            <div class="destination-photo"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=900&auto=format&fit=crop" alt="Montanhas e céu estrelado" loading="lazy"><span class="photo-tag">AO AR LIVRE</span><button class="favorite-btn" aria-label="Favoritar Dolomitas"><i data-lucide="heart"></i></button></div>
+            <div class="destination-info"><div class="destination-location"><i data-lucide="map-pin"></i> Itália</div><h3>Dolomitas, Itália</h3><p>Trilhas, lagos alpinos e vistas de tirar o fôlego.</p><div class="destination-footer"><span><small>A partir de</small><strong>R$ 4.790 <small>/ pessoa</small></strong></span><a href="#contato" class="round-arrow" aria-label="Consultar viagem para Dolomitas"><i data-lucide="arrow-up-right"></i></a></div></div>
+          </article>
+        </div>
+        <p class="no-results" id="noResults" hidden>Nenhum destino encontrado. Tente outra busca.</p>
+        <div class="center-action"><a class="button button-outline" href="#contato">Quero um roteiro personalizado <i data-lucide="arrow-up-right"></i></a></div>
+        <p class="price-disclaimer">* Valores ilustrativos por pessoa, sujeitos a alteração e confirmação. A Voyago é uma demonstração de site; não realiza reservas reais.</p>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experiencias">
+      <div class="container experience-layout">
+        <div class="experience-image-wrap"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=85&w=1100&auto=format&fit=crop" alt="Viajante contemplando uma paisagem de montanhas" loading="lazy"><div class="image-stamp"><i data-lucide="sun"></i><span>VIVA<br>O AGORA</span></div></div>
+        <div class="experience-copy"><div class="eyebrow"><span></span> MAIS DO QUE UM DESTINO</div><h2>Viajar é colecionar<br><em>novas versões de você.</em></h2><p>Acreditamos que uma viagem boa não começa no embarque. Começa quando você encontra um lugar que faz seus olhos brilharem.</p>
+          <div class="benefit-list"><div class="benefit"><span class="benefit-icon"><i data-lucide="map"></i></span><div><h3>Roteiros com propósito</h3><p>Ideias pensadas para o seu ritmo, seu estilo e seus sonhos.</p></div></div><div class="benefit"><span class="benefit-icon"><i data-lucide="heart-handshake"></i></span><div><h3>Experiências autênticas</h3><p>Menos viagem automática. Mais histórias para contar.</p></div></div><div class="benefit"><span class="benefit-icon"><i data-lucide="sparkles"></i></span><div><h3>Inspiração sem limites</h3><p>Descubra possibilidades que você ainda nem imaginou.</p></div></div></div>
+          <a class="text-link" href="#contato">Vamos planejar juntos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section" id="sobre"><div class="container quote-inner"><span class="quote-mark">“</span><blockquote>Não viajamos para fugir da vida.<br>Viajamos para a vida <em>não fugir da gente.</em></blockquote><div class="quote-bottom"><span></span><p>VOYAGO — INSPIRE-SE. EXPLORE. VIVA.</p><span></span></div></div></section>
+
+    <section class="newsletter-section" id="contato"><div class="container newsletter-box"><div><div class="eyebrow light"><span></span> UMA DOSE DE INSPIRAÇÃO</div><h2>O mundo tem novidades.<br><em>Receba as melhores.</em></h2><p>Cadastre seu e-mail para receber ideias de destinos e dicas de viagem.</p></div><form id="newsletterForm" class="newsletter-form"><label for="emailInput">Seu melhor e-mail</label><div class="email-row"><input id="emailInput" type="email" placeholder="voce@email.com" required><button type="submit" aria-label="Cadastrar e-mail"><i data-lucide="arrow-up-right"></i></button></div><small>Sem spam. Só inspiração para sua próxima aventura.</small></form><div class="newsletter-decoration"><i data-lucide="plane"></i></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="#topo"><span class="brand-mark"><i data-lucide="compass"></i></span><span>voya<span class="brand-accent">go</span><small>EXPLORE O EXTRAORDINÁRIO</small></span></a><p>O mundo é grande. Vá viver.</p><div class="footer-social"><a href="#contato" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#contato" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#contato" aria-label="E-mail"><i data-lucide="mail"></i></a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Voyago. Todos os direitos reservados.</span><span>Feito para quem nasceu para explorar.</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
